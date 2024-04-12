@@ -397,7 +397,7 @@ void fillBox(unsigned x, unsigned y, unsigned w, unsigned h, uint8_t pxRed, uint
 }
 
 
-void fillBox2(unsigned x, unsigned y, unsigned w, unsigned h, uint8_t pxRed, uint8_t pxGreen, uint8_t pxBlue, uint8_t * data, uint headPtr)
+void fillBox2(unsigned x, unsigned y, unsigned w, unsigned h, uint8_t pxRed, uint8_t pxGreen, uint8_t pxBlue, uint8_t * data, int headPtr)
 {
     //const unsigned y1 = /*83 + */y - h;
     //const unsigned y2 = /*83 + */y - 1;
@@ -425,7 +425,7 @@ void fillBox2(unsigned x, unsigned y, unsigned w, unsigned h, uint8_t pxRed, uin
     wrData(x2); 
 
     wrCmmd(ST7789_RAMWR);
-    uint i;
+    int i;
     for (i = 0; i < w*h; i++)
     {
         //vTaskDelay(10 / portTICK_PERIOD_MS);

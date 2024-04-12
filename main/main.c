@@ -76,7 +76,7 @@ void demo1()
     uint8_t data[240];
     uint64_t lastValue = 0;
     uint64_t currentValue = 0;
-    uint headPtr = 0;
+    int headPtr = 0;
     for (int i= 0; i<240; i++) {
         
         data[i] = 0; //(uint8_t) ( currentValue % (uint64_t)20 ) ;//  i%20;
